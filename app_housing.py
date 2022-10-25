@@ -17,7 +17,7 @@ income_filter = st.sidebar.radio('Choose income level',('Low','Medium','High'))
 
 #filter by price
 
-df = df[df.median_house_value <= value_filter]
+df = df[df.median_house_value >= value_filter]
 
 #filter by location
 df = df[df.ocean_proximity.isin(location_filter)]
